@@ -1,29 +1,28 @@
-## Zadania do wykładu 1.
+<h2>Lecture 1 Tasks.</h2>
 
-Projekt zawiera cztery zadania.
+<p>The project contains four tasks.</p>
 
-### Zadanie 1 - Hello World
-Klasę `HelloWorld`, należy zaimplementować tak, a była uruchamialna jako aplikacja. Należy wyświetlić wszystkie parametry przekazane aplikacji, każdy paramter w nowej linii. W przypadku braku parametrów, należy wyświetlić komunikat `No input parameters provided`.
+<h3>Task 1 - Hello World</h3>
+<p>Implement the <code>HelloWorld</code> class to be executable as an application. Display all the parameters passed to the application, each parameter on a new line. If no parameters are provided, display the message <code>No input parameters provided</code>.</p>
 
-### Zadanie 2 - Quadratic Equation
-W klasie `QuadraticEquation`, metoda `findRoots` należy zaimplementować rozwiązywanie równań kwadratowych w postaci `ax2+bx+c=0`.
+<h3>Task 2 - Quadratic Equation</h3>
+<p>In the <code>QuadraticEquation</code> class, implement the <code>findRoots</code> method to solve quadratic equations of the form <code>ax^2 + bx + c = 0</code>.</p>
 
-W razie odnalezienia dwóch pierwiastków należy zwrócić tablicę o rozmiarze 2 z pierwiastkami. Przy jednem pierwiastku - tablica o rozmiarze 1, przy 0 - tablica o rozmiarze 0.
+<p>If two roots are found, return an array of size 2 with the roots. For one root, return an array of size 1, and for no roots, return an array of size 0.</p>
 
-### Zadanie 3 - Reverser
-W klasie `Reverser` należy zaimplementować 2 metody.
+<h3>Task 3 - Reverser</h3>
+<p>In the <code>Reverser</code> class, implement two methods:</p>
 
-Metoda `reverse` powinna zwrócić przekazany parametr z wszystkimi znakami w odwrotnej kolejności, z usunięciem białych znaków z początku i końca Stringa.
+<ol>
+  <li>The <code>reverse</code> method should return the input parameter with all characters in reverse order, removing leading and trailing white spaces.</li>
+  <li>The <code>reverseWords</code> method should return the input parameter with all words in reverse order, removing leading and trailing white spaces. Words are separated by spaces.</li>
+</ol>
 
-Metoda `reverseWords` powinna zwrócić przekazany parametr z wszystkim słowami w odwrotnej kolejności, z usunięciem białych znaków z początku i końca Stringa. Słowa są oddzielone spacją.
+<h3>Task 4 - Banner</h3>
+<p>In the <code>Banner</code> class, implement the <code>toBanner</code> method to return the input text in ASCII art format using the ASCII art font "Banner" with a size of 7. The output string should only contain uppercase letters (upper-case). If the input parameter is <code>null</code>, return an empty array.</p>
 
-### Zadanie 4 - Banner
-W klasie `Banner` należy zaimplementować metodę `toBanner` w taki sposób, aby zwróciła tekst w parametrze `input` w formie ASCII-artu, w ASCII-artowym foncie banner, o rozmiarze 7.
-Wyjściowy ciąg powinien zawierać tylko duże litery (upper-case). Jeśli parametr wejściowy ma wartość `null`, należy zwrócić pustą tablicę.
+<p>The resulting array should contain each line of the generated text, starting from the top at index 0 and ending at the bottom. The <code>main</code> method contains the code necessary to display the generated text correctly.</p>
 
-Kolejne elementy w zwracanej tablicy powinny zawierać cały wiersz do wyświetlenia, zaczynając od górnego przy indeksie 0, kończąc na dolnym. Metoda `main` zawiera kod, któr umożliwia prawidłowe wyświetlenie wygenerowanego tekstu.
+<p>You can find the font here: <a href="http://patorjk.com/software/taag/#p=display&f=Banner&t=">http://patorjk.com/software/taag/#p=display&f=Banner&t=</a>.</p>
 
-Sam font można znaleźć tu: http://patorjk.com/software/taag/#p=display&f=Banner&t=.
-
-Wysokość tekstu: 7, szerokość (prawie) każdej litery: 7, odstęp pomiędzy literami w słowie: 1, szerokość spacji: 4.
-
+<p>Text height: 7, width (almost) of each letter: 7, space between letters in a word: 1, width of space character: 4.</p>
