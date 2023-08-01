@@ -1,15 +1,17 @@
-## Zadanie do wykładu 7: ubezpieczenia na Florydzie. ##
+<h2>Task for Lecture 7: Florida Insurance</h2>
 
-Plik `FL_insurance.csv.zip` zawiera dane o ubezpieczeniach na Florydzie w latach 2011-2012. Jest ich całkiem sporo, toteż plik jest spakowany.
+<p>The file <code>FL_insurance.csv.zip</code> contains data on insurance in Florida for the years 2011-2012. It contains a considerable amount of data, so the file is compressed.</p>
 
-Używając API do odczytu plików, należy wczytać dane z tego pliku (polecam `ZipFile`), i przekonwertować na listę zawierającą te dane w pamięci.
+<p>Using the API for file reading, you need to read the data from this file (I recommend using <code>ZipFile</code>) and convert it into a list containing this data in memory.</p>
 
-Używając przetwarzania strumieniowego, należy wykonać następujące operacje:
+<p>Using stream processing, you should perform the following operations:</p>
 
-* Wygenerować plik o nazwie `count.txt`, który będzie zawierał ilość krain ("country").
-* Wygenerować plik o nazwie `tiv2012.txt`, który będzie zawierał sumę wartości ubezpieczenia wszysstkich nieruchomości za 2012 rok (kolumna "tiv_2012")  
-* Wygenerowac plik o nazwie `most_valuable.txt`, zawierający 2 kolumny: "country" oraz "value". Kolumna "country" ma zawierać nazwy 10 krain, dla których wartość ubezbieczenia (total insurance value) sumarycznie wzrosła najwięcej pomiędzy 2011 a 2012 rokiem; nazwy posrtowane malejąco od największego wzrostu wartości do najmniejszego. Kolumna "value" ma zawierać wartość tego przyrostu dla danej krainy, z dokładnością do 2 miejsc dziesiętnych (5 zaokrąglone w gore; 2 miejsca po przecinku zawsze, nawet jeśli jest 0).
+<ul>
+  <li>Generate a file named <code>count.txt</code>, which will contain the number of unique countries in the data ("country" column).</li>
+  <li>Generate a file named <code>tiv2012.txt</code>, which will contain the sum of insurance values for all properties for the year 2012 (column "tiv_2012").</li>
+  <li>Generate a file named <code>most_valuable.txt</code>, containing 2 columns: "country" and "value". The "country" column should contain the names of the top 10 countries for which the total insurance value increased the most between 2011 and 2012; the names should be sorted in descending order based on the increase in value. The "value" column should contain the value of this increase for each country, rounded to 2 decimal places (5 rounded up; 2 decimal places always, even if it's 0).</li>
+</ul>
 
-Pliki należy generować w głównym katalogu projektu. Wszystkie pliki powinny zawierać wiersz z nagłówkiem. Separator kolumn: przecinek `,`. Separator dziesiętny: kropka `.`
+<p>The files should be generated in the main project directory. All files should include a header row. Column separator: comma <code>,</code>. Decimal separator: period <code>.</code></p>
 
-UWAGA: prosze pamiętać, że "hardkodowanie" wyników, pomimo przejścia testów, nie oznacza zaliczenia zadania. Aby otrzymać ocenę BDB, każde przetworzenie należy obsłużyć jednym przebiegiem strumienia.
+<p>NOTE: Please remember that "hardcoding" the results, despite passing the tests, does not mean the task is completed. To receive a grade of BDB (Very Good), each operation should be handled in one stream pass.</p>

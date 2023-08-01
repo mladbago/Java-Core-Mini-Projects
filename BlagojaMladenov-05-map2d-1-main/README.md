@@ -1,5 +1,5 @@
-## Zadanie do wykładu 5 - Map2D
+<h2>Task for Lecture 5 - Map2D</h2>
 
-Należy zaimplementować interfejs `Map2D` w taki sposób, aby zrealizować funkcjonalność opisaną w javadocu do tego interfejsu.
+<p>You need to implement the <code>Map2D</code> interface in such a way as to realize the functionality described in the javadoc for this interface.</p>
 
-Metoda fabrykująca `#defaultInstance()` powinna zwracać nową instację mapy - jest ona używana w testach do utworzenia instancji.
+<p>The factory method <code>#defaultInstance()</code> should return a new instance of the map - it is used in tests to create instances.</p>

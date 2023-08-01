@@ -1,71 +1,69 @@
-## Zadanie 1: łączenie list.
-Należy zaimplementować metodę `uj.wmii.pwj.collections.ListMerger.mergeLists` w taki sposób, aby stworzyła nową, niemodyfikowalną listę zawierającą na przemian elementy z pierwszej i drugiej listy. Metoda nie powinna zwracać nigdy wartości null, tylko pustą listę.
+<h2>Task 1: Merging Lists.</h2>
+<p>You need to implement the <code>uj.wmii.pwj.collections.ListMerger.mergeLists</code> method in such a way that it creates a new immutable list containing elements from the first and second lists alternately. The method should never return null, but an empty list instead.</p>
 
-## Zadanie 2: generowanie Stringa w formacie json z kolekcji.
+<h2>Task 2: Generating a JSON String from a Collection.</h2>
+<p>You need to build a class that implements the <code>uj.wmii.pwj.collections.JsonMapper</code> interface to create a JSON-formatted String from a provided map.</p>
 
-Należy zbudować klasę implemententującą intefejs `uj.wmii.pwj.collections.JsonMapper` tak, aby z dostarczonej mapy budowała String w formacie json.
+<p>The <code>defaultInstance</code> method in the <code>JsonMapper</code> interface serves as a factory method - it should return an instance of the created class.</p>
 
-Metoda `defaultInstance` w interfejsie `JsonMapper` jest fabryką - powinna zwracać instancję stworzonej klasy.
+<p>Allowed types of values:</p>
+<ul>
+  <li><code>String</code> - should be converted to a JSON string.</li>
+  <li><code>int</code>, <code>short</code>, <code>long</code>, <code>byte</code>, <code>boolean</code>, <code>float</code>, <code>double</code> - should be converted to the corresponding JSON types (numeric, boolean).</li>
+  <li><code>Map</code> - should be converted to a nested object.</li>
+  <li><code>List</code> - should be converted to an array.</li>
+</ul>
 
-Klucze mapy zawsze będą typu `String`.
+<h2>Task 3: Building a Random Battleship Game Map Generator.</h2>
+<p>You need to write a generator to randomly create valid battleship game maps (<code>uj.wmii.pwj.collections.collections.BattleshipGenerator.generateMap</code>).</p>
 
-Dozwolone type wartości: 
-* `String` - należy zamienić na json string
-* `int`, `short`, `long`, `byte`, `boolean`, `float`, `double` - należy zamienić na odpowiednie typy json (liczbowy, boolean)
-* `Map` - należy zamienić na zagnieżdżony obiekt
-* `List` - należy zamienić na tablicę
+<p>The <code>defaultInstance</code> method in the <code>BattleshipGenerator</code> interface serves as a factory method - it should return an instance of the created class.</p>
 
-## Zadanie 3: zbudować kreator losowej planszy do gry w statki
+<p>The battleship game map is a 10x10 square (the API should return a <code>String</code> with a size of 100, indexes 0-9: the first row, 10-19 the second row, and so on). Each cell can contain a ship element (mast) marked with <code>*</code>, or water marked by <code>.</code>.</p>
 
-Należy napisać kreator do losowania poprawnych plansz do gry w statki (zaimplementować `uj.wmii.pwj.collections.collections.BattleshipGenerator.generateMap`).
+<p>Ships can be 1, 2, 3, or 4 masts long. A ship consists of one or more adjacent cells containing a mast. Masts touching only by corners are not considered part of the same ship.</p>
 
-Metoda `defaultInstance` w interfejsie `BattleshipGenerator` jest fabryką - powinna zwracać instancję stworzonej klasy.
-
-Plansza do gry w statki jest kwadratem 10x10 (API powinno zwracać `String` o rozmiarze 100. indeksy 0-9: pierwszy wiersz, 10-19 drugi wiersz, itd). Każde pole może zawierać element statku (maszt), oznaczony znakiem `*`, lub zawierać wodę oznaczoną przez `.`.
-
-Statki mogą być 1, 2, 3, lub 4 masztowe. Statek to jedno, lub więcej stykających się bokiem, pole zawierające maszt. Maszty stykające się tylko rogami nie są statkiem.
-
-Przykłady prawidłowych statków (w otoczeniu wody):
-```
+<p>Examples of valid ships (surrounded by water):</p>
+<pre>
 ...
-.#.  -> jednomasztowiec
+.#.  - one-mast ship
 ...
 
 ......
-.##.#. -> dwa dwumasztowce
+.##.#. - two two-mast ships
 ....#.
 
 .....
-..#..  -> trójmasztowiec
+..#..  - three-mast ship
 .##..
 
 .........
 ......##.
-.####.##. -> dwa czteromasztowce
+.####.##. - two four-mast ships
 .........
-```
+</pre>
 
-Przykłady nieprawidłowych statków:
-```
+<p>Examples of invalid ships:</p>
+<pre>
 ......
-..#...  -> nieprawidłowy dwumasztowiec
+..#...  - invalid two-mast ship
 ...#..
 ......
 .......
 ...#...
-..#.#..  -> nieprawidłowy czteromasztowiec
+..#.#..  - invalid four-mast ship
 ...#...
-```
+</pre>
 
-Prawidłowa plansza zawiera: 4 jednomasztowce, 3 dwumasztowce, 2 trójmasztowce, oraz 1 czteromasztowiec. Pomiędzy statkami musi być przynajmniej jedno pole odstępu (statki nie mogą dotykać się rogami).
+<p>A valid map contains: 4 one-mast ships, 3 two-mast ships, 2 three-mast ships, and 1 four-mast ship. There must be at least one space between ships (ships cannot touch each other by corners).</p>
 
-Przykładowa prawidłowa plansza:
-```
+<p>Example of a valid map:</p>
+<pre>
 ..#.......#......#..#..#........##............##...##................#..##...#...##....#.#.......#..
-```
+</pre>
 
-Ta sama plansza z dodatkowe znakami końca linii co 10 znaków dla czytelności:
-```
+<p>The same map with additional line breaks every 10 characters for readability:</p>
+<pre>
 ..#.......
 #......#..
 #..#......
@@ -76,4 +74,4 @@ Ta sama plansza z dodatkowe znakami końca linii co 10 znaków dla czytelności:
 ..##...#..
 .##....#.#
 .......#..
-```
+</pre>
