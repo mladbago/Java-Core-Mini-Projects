@@ -1,0 +1,10 @@
+.gradle
+gradle/wrapper/*.jar
+.idea
+build
+*.iml
+my_repo
+.gvt
+a.txt
+b.txt
+c.txt
