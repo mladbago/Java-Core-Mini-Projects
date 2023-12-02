@@ -1,4 +1,4 @@
-<h1>zadania-08-test-engine</h1>
+<h1>Task-08-test-engine</h1>
     <p>The task is to enhance the Test Engine from the lecture (available on Pegaz).</p>
     <ul>
         <li>Add annotations (one or more) with the description of the expected outcome, correlated (e.g., by order) with the annotations.</li>
